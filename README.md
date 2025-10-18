@@ -113,16 +113,19 @@ Comprehensive visual insights using **Matplotlib** and **Seaborn**:
 
 ## 🧾 Results
 
-| Model | MAE | RMSE | MAPE (%) | R² | Adj_R² |
-|:------|----:|----:|---------:|---:|-------:|
-| Linear Regression | ... | ... | ... | ... | ... |
-| Lasso LARS | ... | ... | ... | ... | ... |
-| Decision Tree | ... | ... | ... | ... | ... |
-| **Random Forest** | **Lowest error** | **Best fit** | **✔️** | **✔️** | **✔️** |
-| KNN | ... | ... | ... | ... | ... |
-| SVR | ... | ... | ... | ... | ... |
+After training and evaluating six supervised machine learning models on the Rossmann dataset, the following performance metrics were obtained on the validation set:
 
-> 🏆 **Random Forest Regressor** gave the best overall performance on validation data.
+| Rank | Model             | MAE (↓) | RMSE (↓) | MAPE (%) (↓) | R² (↑) | Adj. R² (↑) |
+|:----:|:------------------|--------:|---------:|--------------:|-------:|-------------:|
+| 🥇 1 | **Random Forest Regressor** | **665.13** | **986.17** | **10.40** | **0.8638** | **0.8635** |
+| 🥈 2 | K-Nearest Neighbors (KNN) | 761.23 | 1112.17 | 11.81 | 0.8267 | 0.8264 |
+| 🥉 3 | Decision Tree Regressor | 809.20 | 1222.70 | 12.52 | 0.7906 | 0.7901 |
+| 4 | Linear Regression | 1129.56 | 1590.60 | 18.02 | 0.6456 | 0.6448 |
+| 5 | Lasso LARS | 1136.83 | 1598.46 | 18.23 | 0.6421 | 0.6413 |
+| 6 | Support Vector Regressor (SVR) | 1720.23 | 2418.14 | 29.20 | 0.1809 | 0.1792 |
+
+✅ **Best Model:** Random Forest Regressor  
+It achieved the lowest MAE (665.13) and RMSE (986.17), while maintaining the highest R² (0.8638), demonstrating strong predictive power and generalization.
 
 The final model was retrained on the full training data and predictions were generated for the test set.
 
